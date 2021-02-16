@@ -52,11 +52,9 @@ namespace PooCSharp
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double p = (x.A + x.B + x.C) / 2;
-            double areaX = Math.Sqrt(p * (p - x.A) * (p - x.B) * (p - x.C));
+            double areaX = x.CalculaAreaTriangulo();
 
-            p = (y.A + y.B + y.C) / 2;
-            double areaY = Math.Sqrt(p * (p - y.A) * (p - y.B) * (p - y.C));
+            double areaY = y.CalculaAreaTriangulo();
 
             Console.WriteLine($"Area do x = {areaX.ToString("F4", CultureInfo.InvariantCulture)}");
             Console.WriteLine($"Area do y = {areaY.ToString("F4", CultureInfo.InvariantCulture)}");
